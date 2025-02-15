@@ -4,6 +4,8 @@ import UserIcon from './UserIcon'
 import { RxHamburgerMenu } from 'react-icons/rx'
 import { links } from '@/utils/links'
 import Link from 'next/link'
+import SignOutLink from './SignOutLink'
+import { SignedOut, SignedIn } from '@clerk/nextjs'
 
 function LinksDropdown() {
   return (

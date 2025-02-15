@@ -1,10 +1,8 @@
-import React from 'react'
+import { HiOutlineUser } from 'react-icons/hi'
 
 function UserIcon() {
   return (
-    <div>
-      <h1>User Icon</h1>
-    </div>
+    <HiOutlineUser className='w-6 h-6 bg-primary rounded-full text-light' />
   )
 }
 

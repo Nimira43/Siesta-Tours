@@ -5,7 +5,7 @@ import { RxHamburgerMenu } from 'react-icons/rx'
 import { links } from '@/utils/links'
 import Link from 'next/link'
 import SignOutLink from './SignOutLink'
-import { SignedOut, SignedIn } from '@clerk/nextjs'
+import { SignedOut, SignedIn, SignInButton, SignOutButton } from '@clerk/nextjs'
 
 function LinksDropdown() {
   return (

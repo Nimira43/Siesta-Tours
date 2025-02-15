@@ -1,8 +1,12 @@
+import { Input } from "../ui/input";
+
 function NavSearch() {
   return (
-    <div>
-      <h1>NavSearch</h1>
-    </div>
+    <Input
+      type='search'
+      placeholder='Find a property...'
+      className='max-w-xs dark:bg-muted'
+    />
   )
 }
 

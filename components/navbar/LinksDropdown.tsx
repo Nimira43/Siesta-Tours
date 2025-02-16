@@ -24,20 +24,30 @@ function LinksDropdown() {
         align='start'
         sideOffset={10}
       >
-        {links.map((link) => {
-          return (
-            <DropdownMenuItem
-              key={link.href}
-            >
-              <Link
-                href={link.href}
-                className='capitalize w-full'
+
+        <SignedOut>
+
+        </SignedOut>
+
+        <SignedIn>
+          {links.map((link) => {
+            return (
+              <DropdownMenuItem
+                key={link.href}
               >
-                {link.label}
-              </Link>
-            </DropdownMenuItem>
-          )
-        })}
+                <Link
+                  href={link.href}
+                  className='capitalize w-full'
+                >
+                  {link.label}
+                </Link>
+              </DropdownMenuItem>
+            )
+          })} 
+        </SignedIn>
+        
+        
+        
       </DropdownMenuContent>
     </DropdownMenu>
   )

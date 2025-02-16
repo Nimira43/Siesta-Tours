@@ -1,4 +1,4 @@
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu'
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuSeparator, DropdownMenuTrigger } from '@/components/ui/dropdown-menu'
 import { Button } from '@/components/ui/button'
 import UserIcon from './UserIcon'
 import { RxHamburgerMenu } from 'react-icons/rx'
@@ -44,8 +44,12 @@ function LinksDropdown() {
               </DropdownMenuItem>
             )
           })} 
+          <DropdownMenuSeparator />
+          <DropdownMenuItem>
+            <SignOutLink />
+          </DropdownMenuItem>
         </SignedIn>
-        
+          
         
         
       </DropdownMenuContent>

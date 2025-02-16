@@ -5,7 +5,7 @@ import { RxHamburgerMenu } from 'react-icons/rx'
 import { links } from '@/utils/links'
 import Link from 'next/link'
 import SignOutLink from './SignOutLink'
-import { SignedOut, SignedIn, SignInButton, SignOutButton } from '@clerk/nextjs'
+import { SignedOut, SignedIn, SignInButton, SignUpButton } from '@clerk/nextjs'
 
 function LinksDropdown() {
   return (
@@ -24,11 +24,19 @@ function LinksDropdown() {
         align='start'
         sideOffset={10}
       >
-
         <SignedOut>
-
+          <DropdownMenuItem>
+            <SignInButton mode='modal'>
+              <button className='w-full text-left'>Login</button>
+            </SignInButton>
+          </DropdownMenuItem>
+          <DropdownMenuSeparator />
+          <DropdownMenuItem>
+            <SignUpButton mode='modal'>
+              <button className='w-full text-left'>Register</button>
+            </SignUpButton>
+          </DropdownMenuItem>
         </SignedOut>
-
         <SignedIn>
           {links.map((link) => {
             return (
@@ -49,9 +57,6 @@ function LinksDropdown() {
             <SignOutLink />
           </DropdownMenuItem>
         </SignedIn>
-          
-        
-        
       </DropdownMenuContent>
     </DropdownMenu>
   )

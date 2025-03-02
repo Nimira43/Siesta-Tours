@@ -8,12 +8,23 @@ const createProfileAction = async (formData: FormData) => {
   console.log(firstName)
 }
 
-function CreateProfilePage() {
+function CreateProfile() {
   return (
-    <div>
-      
-    </div>
+    <section>
+      <h1 className='text-2xl font-medium mb-8 uppercase'>New User</h1>
+      <div className='border p-8 rounded-md max-w-lg'>
+        <form action={createProfileAction}>
+          <div className='mb-2'>
+            <Label htmlFor='firstName'>First Name</Label>
+            <Input id='firstName' name='firstName' type='text' />
+          </div>
+          <Button type='submit' size='lg'>
+            Create Profile
+          </Button>
+        </form>
+      </div>
+    </section>
   )
 }
 
-export default CreateProfilePage
+export default CreateProfile

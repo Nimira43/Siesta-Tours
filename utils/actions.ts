@@ -8,7 +8,7 @@ export const createProfileAction = async (
 ) => {
   try {
     const rawData = Object.fromEntries(formData)
-    const validatedFields = profileSchema
+    const validatedFields = profileSchema.parse(rawData)
   } catch (error) {
 
   }

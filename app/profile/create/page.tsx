@@ -5,7 +5,7 @@ import FormContainer from '@/components/form/FormContainer'
 const createProfileAction = async (prevState: any, formData: FormData) => {
   'use server'
   const firstName = formData.get('firstName') as string
-  if (firstName !== 'testing name') return { message: 'An error has occurred.' }
+  if (firstName !== 'John') return { message: 'An error has occurred.' }
   return { message: 'Profile Created' }
 }
 
@@ -13,9 +13,9 @@ function CreateProfile() {
   return (
     <section>
       <h1 className='text-2xl font-medium mb-8 uppercase'>New User</h1>
-      <div className='border p-8 rounded-md max-w-lg'>
+      <div className='border p-8 rounded-md'>
         <FormContainer action={createProfileAction}>
-          <div className='grid gap-4 mt-4 '>
+          <div className='grid md:grid-cols-2 gap-4 mt-4 '>
             <FormInput type='text' name='firstName' label='First Name' />
             <FormInput type='text' name='lastName' label='Last Name' />
             <FormInput type='text' name='username' label='Username' />

@@ -1,7 +1,7 @@
 function ReviewsPage() {
   return (
     <div>
-      <h1>Reviews Page</h1>
+      <h1>Reviews</h1>
     </div>
   )
 }

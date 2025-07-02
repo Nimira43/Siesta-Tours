@@ -11,7 +11,7 @@ const config: Config = {
   	extend: {
   		colors: {
   			'--main': '#ff4500',
-  			'--sky': '#87ceeb',
+  			'--support': '#008080',
   			'--dark': '#111',
   			'--light': '#fffcfa',
   			'--grey-dark': '#333',
